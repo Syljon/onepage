@@ -1,5 +1,87 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
 html {
   font-size: 62.5%; }
 
 body {
-  background-color: #333; }
+  box-sizing: border-box; }
+
+.header {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../img/header.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #e3c4a8;
+  z-index: 1000; }
+  .navigation .logo {
+    color: #226089;
+    font-size: 3rem; }
+  .navigation .black {
+    color: #4592af; }
+  .navigation .nav {
+    z-index: -100; }
+    .navigation .nav__item {
+      display: inline-block; }
+      .navigation .nav__item:not(:last-child) {
+        margin-right: 2rem; }
+    .navigation .nav__link {
+      display: inline-block;
+      color: #226089;
+      font-size: 1.7rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: all 0.2s ease-in; }
+    .navigation .nav__link:hover {
+      color: #4592af;
+      border-bottom: 2px solid #226089; }
+  .navigation .burger {
+    display: none; }
+    .navigation .burger__line {
+      display: block;
+      margin: 0.5rem;
+      background-color: black;
+      width: 25px;
+      height: 3px; }
+
+@media (max-width: 768px) {
+  .navigation .nav {
+    display: flex;
+    list-style-type: none;
+    position: fixed;
+    top: 8vh;
+    left: 0;
+    height: 70vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #e3c4a8;
+    transform: translateY(-150%);
+    transition: transform 0.5s ease-in-out; }
+    .navigation .nav__item {
+      display: block; }
+    .navigation .nav__link {
+      font-size: 2.5rem;
+      margin-right: 0; }
+  .navigation .active {
+    transform: translateY(0); }
+  .navigation .burger {
+    display: block; } }

@@ -1,6 +1,4 @@
-html {
-  font-size: 62.5%;
-}
-body {
-  background-color: #333;
-}
+@import "./base/base";
+@import "./base/variables";
+@import "./pages/home";
+@import "./layout/navigation";
