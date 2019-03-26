@@ -1,8 +1,326 @@
 .header {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-image: url("../img/header.jpg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
+
+  &__text-box {
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    @include contentCenter;
+    text-align: center;
+    .heading {
+      text-transform: uppercase;
+      backface-visibility: hidden;
+      line-height: 2;
+      margin-bottom: 3rem;
+      &--main {
+        display: block;
+        font-size: 5rem;
+        font-weight: 400;
+        letter-spacing: 1rem;
+        color: $color-primary;
+      }
+      &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 0.5rem;
+        color: $color-secondary;
+      }
+    }
+  }
+}
+
+.section-services {
+  position: relative;
+  padding: 15rem 0;
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background-color: $color-secondary;
+    z-index: -10;
+  }
+  &__heading {
+    font-size: 6rem;
+    font-weight: 700;
+    margin-top: -6rem;
+    margin-bottom: 6rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: $color-tertiary;
+  }
+  &__boxs {
+    display: flex;
+    flex-direction: column;
+  }
+  .box {
+    padding: 4rem 2rem;
+    background-color: $color-tertiary;
+    border-radius: 1rem;
+    box-shadow: 0 2rem 4rem 0 rgba(0, 0, 0, 0.8);
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+    i {
+      margin-bottom: 2rem;
+      color: $color-primary;
+    }
+    &__heading {
+      margin-bottom: 2rem;
+      font-size: 3rem;
+      font-weight: 400;
+      color: $color-secondary;
+      text-transform: uppercase;
+    }
+    &__text {
+      font-size: 2rem;
+      padding: 0 3rem;
+      text-align: left;
+    }
+  }
+}
+.section-team {
+  padding: 10rem 0;
+  background-color: $color-tertiary;
+  transform: skewY(-7deg);
+  & .container {
+    transform: skewY(7deg);
+  }
+  &__heading {
+    font-size: 6rem;
+    font-weight: 700;
+    margin-bottom: 6rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: $color-primary;
+  }
+  &__boxs {
+    display: flex;
+    flex-direction: column;
+  }
+  .box-team {
+    background-color: $color-secondary;
+    padding: 1rem 0;
+    box-shadow: 0 2rem 4rem 0 rgba(0, 0, 0, 0.7);
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+    &__img {
+      width: 100%;
+    }
+    &__name {
+      font-size: 3rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: $color-primary;
+    }
+    &__role {
+      font-size: 2rem;
+      font-weight: 300;
+      color: $color-tertiary;
+    }
+  }
+}
+
+.section-testimonial {
+  margin-top: -10rem;
+  padding: 20rem 0 5rem;
+  background-image: linear-gradient(
+      45deg,
+      rgba($color-secondary, 1),
+      rgba($color-secondary, 0.5)
+    ),
+    url("../img/testimonial_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  .carousel {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    &__btn {
+      position: absolute;
+      top: 50%;
+      z-index: 10;
+      font-size: 4rem;
+      color: white;
+      cursor: pointer;
+      &-left {
+        left: 0;
+      }
+      &-right {
+        right: 0;
+      }
+    }
+  }
+  .slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  .slide {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 100%;
+    padding: 0 3rem;
+    font-size: 1.5rem;
+    &__img {
+      width: 200px;
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      margin-bottom: 2rem;
+      &--1 {
+        background-image: url("../img/team1.jpg");
+      }
+      &--2 {
+        background-image: url("../img/team2.jpg");
+      }
+      &--3 {
+        background-image: url("../img/team3.jpg");
+      }
+    }
+    &__heading {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      color: $color-tertiary;
+    }
+    &__text {
+      font-size: 2rem;
+      color: black;
+    }
+  }
+}
+.section-pricing {
+  padding: 10rem 0;
+  background-color: $color-primary;
+  &__heading {
+    font-size: 6rem;
+    font-weight: 700;
+    margin-bottom: 6rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: $color-tertiary;
+  }
+  &__boxs {
+    display: flex;
+    flex-direction: column;
+  }
+  .box-pricing {
+    background-color: $color-tertiary;
+    border-radius: 1rem;
+    box-shadow: 0 2rem 4rem 0 rgba(0, 0, 0, 0.6);
+    text-align: center;
+    overflow: hidden;
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+    &__heading {
+      text-transform: uppercase;
+      font-size: 3rem;
+      font-weight: 400;
+      padding: 2rem 0;
+      color: $color-primary;
+      background-color: $color-secondary;
+    }
+    &__price {
+      display: inline-block;
+      padding: 2rem;
+      font-size: 4rem;
+      font-weight: 300;
+      color: $color-primary;
+      border-bottom: 2px solid $color-primary;
+    }
+    &__list {
+      list-style: none;
+      padding: 2rem 0;
+      &-item {
+        padding: 2rem;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+@media (min-width: 786px) {
+  .section-services {
+    &__boxs {
+      flex-direction: row;
+    }
+
+    .box {
+      width: 33.3333%;
+      &:not(:last-child) {
+        margin-bottom: 0rem;
+        margin-right: 2rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 786px) {
+  .section-team {
+    &__boxs {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: baseline;
+      text-align: center;
+      justify-content: space-around;
+    }
+
+    .box-team {
+      max-width: 40%;
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media (min-width: 786px) {
+  .section-pricing {
+    &__boxs {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: baseline;
+      text-align: center;
+      justify-content: space-around;
+    }
+
+    .box-pricing {
+      width: 45%;
+      &:last-child {
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .section-pricing {
+    .box-pricing {
+      width: 30%;
+      &:last-child {
+        width: 30%;
+      }
+    }
+  }
 }

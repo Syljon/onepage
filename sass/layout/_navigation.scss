@@ -10,6 +10,7 @@
   justify-content: space-around;
   background-color: $color-tertiary;
   z-index: 1000;
+  box-shadow: 0 1rem 3rem 0.5rem rgba(0, 0, 0, 0.3);
   .logo {
     color: $color-primary;
     font-size: 3rem;
@@ -31,7 +32,7 @@
       font-size: 1.7rem;
       text-transform: uppercase;
       text-decoration: none;
-      border-bottom: 1px solid transparent;
+      border-bottom: 2px solid transparent;
       transition: all 0.2s ease-in;
     }
     &__link:hover {
@@ -42,12 +43,33 @@
 
   .burger {
     display: none;
+    position: relative;
+    width: 2.5rem;
+    cursor: pointer;
     &__line {
       display: block;
-      margin: 0.5rem;
+      position: absolute;
       background-color: black;
       width: 25px;
       height: 3px;
+
+      &::before,
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        background-color: black;
+        width: 25px;
+        height: 3px;
+        transition: all 0.2s ease-in-out;
+      }
+
+      &::before {
+        top: -0.8rem;
+      }
+      &::after {
+        top: 0.8rem;
+      }
     }
   }
 }
@@ -75,11 +97,20 @@
         margin-right: 0;
       }
     }
-    .active {
+    .nav.active {
       transform: translateY(0);
     }
     .burger {
       display: block;
+      &.active .burger__line {
+        background-color: transparent;
+        &::before {
+          transform: translateY(0.8rem) rotate(45deg);
+        }
+        &::after {
+          transform: translateY(-0.8rem) rotate(-45deg);
+        }
+      }
     }
   }
 }

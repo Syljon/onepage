@@ -4,11 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Document</title>
   </head>
   <body>
-    <header class="header">
+    <header id="home" class="header">
       <nav class="navigation">
         <h1 class="logo">Flex<span class="logo black">Site</span></h1>
         <ul class="nav">
@@ -19,13 +29,15 @@
             <a class="nav__link" href="#services" alt="navServices">Services</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#" alt="navTeam">Team</a>
+            <a class="nav__link" href="#team" alt="navTeam">Team</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#testimonial" alt="navTestimonial"
+              >Testimonial</a
+            >
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#" alt="navPricing">Pricing</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#" alt="navTestimonial">Testimonial</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#" alt="navContact">Contact</a>
@@ -33,11 +45,233 @@
         </ul>
         <div class="burger">
           <div class="burger__line"></div>
-          <div class="burger__line"></div>
-          <div class="burger__line"></div>
         </div>
       </nav>
+      <div class="header__text-box">
+        <h1 class="heading">
+          <span class="heading--main">FlexSite</span>
+          <span class="heading--sub">Make you responsive site with us</span>
+        </h1>
+        <a class="btn btn--primary" href="#">Start now</a>
+        <a class="btn btn--primary-border" href="#">Meet our team</a>
+      </div>
     </header>
+    <main>
+      <section id="services" class="section-services">
+        <div class="section-services__bg"></div>
+        <div class="container">
+          <h2 class="section-services__heading">Our Services</h2>
+          <div class="section-services__boxs">
+            <div class="box">
+              <i class="fas fa-pen fa-5x"></i>
+              <h3 class="box__heading">Content writing</h3>
+              <p class="box__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Asperiores at quasi odit maiores, maxime dignissimos libero
+                reiciendis expedita. Impedit debitis assumenda iure excepturi
+                earum facilis dolor! Ducimus neque assumenda provident!
+              </p>
+            </div>
+            <div class="box">
+              <i class="fas fa-globe fa-5x"></i>
+              <h3 class="box__heading">Web Development</h3>
+              <p class="box__text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
+                aliquam reiciendis, dicta nesciunt vero veniam totam doloremque
+                cum incidunt? Sit possimus in nisi ut eaque aperiam, maiores eos
+                reprehenderit neque.
+              </p>
+            </div>
+            <div class="box">
+              <i class="fas fa-bullhorn fa-5x "></i>
+              <h3 class="box__heading">Digital marketing</h3>
+              <p class="box__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                doloribus id, magni dolorum obcaecati ipsam nobis explicabo
+                voluptatum, molestias commodi dolores et, temporibus blanditiis
+                eveniet sit similique voluptatem? Illo, ratione!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-team" id="team">
+        <div class="container">
+          <h2 class="section-team__heading">Meet our team</h2>
+          <div class="section-team__boxs">
+            <div class="box-team">
+              <img
+                class="box-team__img"
+                src="../img/team1.jpg"
+                alt="Joe Doe img"
+              />
+              <h3 class="box-team__name">Joe Doe</h3>
+              <p class="box-team__role">Chief Operating Officer</p>
+            </div>
+
+            <div class="box-team">
+              <img
+                class="box-team__img"
+                src="../img/team2.jpg"
+                alt="Joe Doe img"
+              />
+              <h3 class="box-team__name">Tiffany Patrick</h3>
+              <p class="box-team__role">Product Designer</p>
+            </div>
+
+            <div class="box-team">
+              <img
+                class="box-team__img"
+                src="../img/team3.jpg"
+                alt="Joe Doe img"
+              />
+              <h3 class="box-team__name">Sheila Tait</h3>
+              <p class="box-team__role">Front-end Developer</p>
+            </div>
+
+            <div class="box-team">
+              <img
+                class="box-team__img"
+                src="../img/team4.jpg"
+                alt="Joe Doe img"
+              />
+              <h3 class="box-team__name">Peter Howell</h3>
+              <p class="box-team__role">Back-end Developer</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonial" class="section-testimonial">
+        <div class="container">
+          <div class="carousel">
+            <i
+              class="fas fa-arrow-left carousel__btn carousel__btn-left"
+              id="prevBtn"
+            ></i>
+
+            <div class="slider">
+              <div class="slide" id="last">
+                <div class="slide__img slide__img--3"></div>
+                <h2 class="slide__heading">Carlie Mcgill</h2>
+                <p class="slide__text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Magnam beatae quasi corporis alias obcaecati, neque a deleniti
+                  ex facere reiciendis laborum quos at sequi nostrum,
+                  repellendus dolorem harum voluptatum autem error et earum iste
+                  fugit rerum iure! Beatae, enim molestias!
+                </p>
+              </div>
+
+              <div class="slide">
+                <div class="slide__img slide__img--1"></div>
+                <h2 class="slide__heading">Mylo Gould</h2>
+                <p class="slide__text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Autem inventore eveniet porro quisquam nostrum voluptate ipsum
+                  quos in ab ratione.
+                </p>
+              </div>
+
+              <div class="slide">
+                <div class="slide__img slide__img--2"></div>
+                <h2 class="slide__heading">Tamika Mclean</h2>
+                <p class="slide__text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam
+                  in fugiat eum optio sint, amet dolor vero deserunt error
+                  blanditiis est sit nulla earum maiores. Hic ipsum accusamus
+                  sit eos adipisci. Minus debitis distinctio molestiae neque
+                  tempora odit autem nesciunt.
+                </p>
+              </div>
+
+              <div class="slide">
+                <div class="slide__img slide__img--3"></div>
+                <h2 class="slide__heading">Carlie Mcgill</h2>
+                <p class="slide__text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Magnam beatae quasi corporis alias obcaecati, neque a deleniti
+                  ex facere reiciendis laborum quos at sequi nostrum,
+                  repellendus dolorem harum voluptatum autem error et earum iste
+                  fugit rerum iure! Beatae, enim molestias!
+                </p>
+              </div>
+
+              <div class="slide" id="first">
+                <div class="slide__img slide__img--1"></div>
+                <h2 class="slide__heading">Mylo Gould</h2>
+                <p class="slide__text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Autem inventore eveniet porro quisquam nostrum voluptate ipsum
+                  quos in ab ratione.
+                </p>
+              </div>
+            </div>
+            <i
+              class="fas fa-arrow-right carousel__btn carousel__btn-right"
+              id="nextBtn"
+            ></i>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pricing" id="pricing">
+        <div class="container">
+          <h2 class="section-pricing__heading">Pricing</h2>
+          <div class="section-pricing__boxs">
+            <div class="box-pricing">
+              <h3 class="box-pricing__heading">Silver</h3>
+              <h3 class="box-pricing__price">$8.00/ Month</h3>
+              <ul class="box-pricing__list">
+                <li class="box-pricing__list-item">
+                  24/7 Tech Suport
+                </li>
+                <li class="box-pricing__list-item">1 Database</li>
+                <li class="box-pricing__list-item">SEO Ready Website</li>
+                <li class="box-pricing__list-item">Social Media Integration</li>
+              </ul>
+              <a class="btn btn--primary" style="margin-bottom: 4rem" href="#"
+                >Start now</a
+              >
+            </div>
+            <div class="box-pricing">
+              <h3 class="box-pricing__heading">Gold</h3>
+              <h3 class="box-pricing__price">$12.00/ Month</h3>
+              <ul class="box-pricing__list">
+                <li class="box-pricing__list-item">
+                  24/7 Tech Suport
+                </li>
+                <li class="box-pricing__list-item">2 Database</li>
+                <li class="box-pricing__list-item">SEO Ready Website</li>
+                <li class="box-pricing__list-item">Social Media Integration</li>
+              </ul>
+              <a class="btn btn--primary" style="margin-bottom: 4rem" href="#"
+                >Start now</a
+              >
+            </div>
+
+            <div class="box-pricing">
+              <h3 class="box-pricing__heading">Diamond</h3>
+              <h3 class="box-pricing__price">$18.00/ Month</h3>
+              <ul class="box-pricing__list">
+                <li class="box-pricing__list-item">
+                  24/7 Tech Suport
+                </li>
+                <li class="box-pricing__list-item">2 Database</li>
+                <li class="box-pricing__list-item">Customer Support</li>
+                <li class="box-pricing__list-item">SEO Ready Website</li>
+                <li class="box-pricing__list-item">Social Media Integration</li>
+                <li class="box-pricing__list-item">Live Chat Integration</li>
+              </ul>
+              <a class="btn btn--primary" style="margin-bottom: 4rem" href="#"
+                >Start now</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="./index.js"></script>
   </body>
 </html>
