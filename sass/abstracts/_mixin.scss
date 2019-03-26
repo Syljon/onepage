@@ -4,3 +4,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@mixin sectionHeading {
+  font-size: 6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}

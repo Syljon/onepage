@@ -18,6 +18,15 @@ body {
   margin: 0 auto;
   text-align: center; }
 
+.mr-btm-small {
+  margin-bottom: 2rem; }
+
+.mr-btm-medium {
+  margin-bottom: 4rem; }
+
+.mr-btm-big {
+  margin-bottom: 6rem; }
+
 .header {
   width: 100%;
   height: 100vh;
@@ -27,26 +36,26 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat; }
   .header__text-box {
+    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
+    transform: translate(-50%, -50%); }
     .header__text-box .heading {
-      text-transform: uppercase;
       backface-visibility: hidden;
-      line-height: 2;
-      margin-bottom: 3rem; }
+      line-height: 2; }
       .header__text-box .heading--main {
         display: block;
-        font-size: 5rem;
-        font-weight: 400;
         letter-spacing: 1rem;
-        color: #226089; }
+        color: #226089;
+        font-size: 6rem;
+        font-weight: 400;
+        text-transform: uppercase; }
       .header__text-box .heading--sub {
         display: block;
         font-size: 2rem;
         font-weight: 700;
+        text-transform: uppercase;
         letter-spacing: 0.5rem;
         color: #4592af; }
 
@@ -57,18 +66,16 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    height: 50%;
     width: 100%;
+    height: 50%;
     background-color: #4592af;
     z-index: -10; }
   .section-services__heading {
-    font-size: 6rem;
-    font-weight: 700;
     margin-top: -6rem;
-    margin-bottom: 6rem;
-    text-transform: uppercase;
+    color: #e3c4a8;
+    font-size: 6rem;
     font-weight: 400;
-    color: #e3c4a8; }
+    text-transform: uppercase; }
   .section-services__boxs {
     display: flex;
     flex-direction: column; }
@@ -80,10 +87,8 @@ body {
     .section-services .box:not(:last-child) {
       margin-bottom: 4rem; }
     .section-services .box i {
-      margin-bottom: 2rem;
       color: #226089; }
     .section-services .box__heading {
-      margin-bottom: 2rem;
       font-size: 3rem;
       font-weight: 400;
       color: #4592af;
@@ -100,12 +105,10 @@ body {
   .section-team .container {
     transform: skewY(7deg); }
   .section-team__heading {
+    color: #226089;
     font-size: 6rem;
-    font-weight: 700;
-    margin-bottom: 6rem;
-    text-transform: uppercase;
     font-weight: 400;
-    color: #226089; }
+    text-transform: uppercase; }
   .section-team__boxs {
     display: flex;
     flex-direction: column; }
@@ -136,17 +139,17 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed; }
   .section-testimonial .carousel {
+    position: relative;
     width: 100%;
     margin: 0 auto;
     display: flex;
-    overflow: hidden;
-    position: relative; }
+    overflow: hidden; }
     .section-testimonial .carousel__btn {
       position: absolute;
       top: 50%;
       z-index: 10;
       font-size: 4rem;
-      color: white;
+      color: #fff;
       cursor: pointer; }
       .section-testimonial .carousel__btn-left {
         left: 0; }
@@ -172,8 +175,7 @@ body {
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      border-radius: 50%;
-      margin-bottom: 2rem; }
+      border-radius: 50%; }
       .section-testimonial .slide__img--1 {
         background-image: url("../img/team1.jpg"); }
       .section-testimonial .slide__img--2 {
@@ -182,27 +184,24 @@ body {
         background-image: url("../img/team3.jpg"); }
     .section-testimonial .slide__heading {
       font-size: 3rem;
-      margin-bottom: 2rem;
       color: #e3c4a8; }
     .section-testimonial .slide__text {
       font-size: 2rem;
-      color: black; }
+      color: #000; }
 
 .section-pricing {
   padding: 10rem 0;
   background-color: #226089; }
   .section-pricing__heading {
+    color: #e3c4a8;
     font-size: 6rem;
-    font-weight: 700;
-    margin-bottom: 6rem;
-    text-transform: uppercase;
     font-weight: 400;
-    color: #e3c4a8; }
+    text-transform: uppercase; }
   .section-pricing__boxs {
     display: flex;
     flex-direction: column; }
   .section-pricing .box-pricing {
-    background-color: #e3c4a8;
+    background-color: #e6e6e6;
     border-radius: 1rem;
     box-shadow: 0 2rem 4rem 0 rgba(0, 0, 0, 0.6);
     text-align: center;
