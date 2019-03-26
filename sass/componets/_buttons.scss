@@ -10,6 +10,11 @@
   margin: 1rem;
   border: 2px solid transparent;
   cursor: pointer;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    transform: translateY(-0.5rem);
+  }
   &--primary {
     color: lighten($color-secondary, 20);
     background-color: $color-primary;
