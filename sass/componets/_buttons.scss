@@ -4,16 +4,18 @@
   padding: 1.5rem 4rem;
   display: inline-block;
   border-radius: 10rem;
-  transition: all 0.2s;
   font-size: 1.6rem;
   font-weight: 700;
-  margin: 1rem;
+
   border: 2px solid transparent;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
 
   &:hover {
     transform: translateY(-0.5rem);
+  }
+  &--header {
+    margin: 1rem;
   }
   &--primary {
     color: lighten($color-secondary, 20);

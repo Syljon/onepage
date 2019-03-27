@@ -1,9 +1,10 @@
 @import "./abstracts/mixin";
 @import "./base/animations";
+@import "./base/variables";
 @import "./base/base";
 @import "./base/utilities";
-@import "./base/variables";
 @import "./pages/home";
 @import "./layout/header";
 @import "./layout/navigation";
+@import "./layout/footer";
 @import "./componets/buttons";

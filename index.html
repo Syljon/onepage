@@ -18,42 +18,48 @@
     <title>FlexSite</title>
   </head>
   <body>
+    <nav class="navigation">
+      <h1 class="logo">
+        <a class="logo__link" href="#"
+          >Flex<span class="logo color-sec">Site</span></a
+        >
+      </h1>
+      <ul class="nav">
+        <li class="nav__item">
+          <a class="nav__link" href="#home" alt="navHome"> Home</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#services" alt="navServices">Services</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#team" alt="navTeam">Team</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#testimonial" alt="navTestimonial"
+            >Testimonial</a
+          >
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#pricing" alt="navPricing">Pricing</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#contact" alt="navContact">Contact</a>
+        </li>
+      </ul>
+      <div class="burger">
+        <div class="burger__line"></div>
+      </div>
+    </nav>
     <header id="home" class="header">
-      <nav class="navigation">
-        <h1 class="logo">Flex<span class="logo black">Site</span></h1>
-        <ul class="nav">
-          <li class="nav__item">
-            <a class="nav__link" href="#home" alt="navHome"> Home</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#services" alt="navServices">Services</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#team" alt="navTeam">Team</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#testimonial" alt="navTestimonial"
-              >Testimonial</a
-            >
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#pricing" alt="navPricing">Pricing</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#" alt="navContact">Contact</a>
-          </li>
-        </ul>
-        <div class="burger">
-          <div class="burger__line"></div>
-        </div>
-      </nav>
       <div class="header__text-box">
         <h1 class="heading mr-btm-medium">
           <span class="heading--main">FlexSite</span>
           <span class="heading--sub">Make you responsive site with us</span>
         </h1>
-        <a class="btn btn--primary" href="#">Start now</a>
-        <a class="btn btn--primary-border" href="#">Meet our team</a>
+        <a class="btn btn--primary btn--heading" href="#">Start now</a>
+        <a class="btn btn--primary-border btn--header" href="#"
+          >Meet our team</a
+        >
       </div>
     </header>
     <main>
@@ -272,29 +278,101 @@
         </div>
       </section>
 
-      <div class="section-contact">
+      <section id="contact" class="section-contact">
         <div class="container">
-          <h2 class="section-contact__heading mr-btm-big">Contact us</h2>
-          <div class="contact-box">
-            <div class="contact-box__form"><form action="#" class="form">
-              <div class="form__container">
-                  <input name="name" class="form__input form__input-1 mr-btm-small" type="text" placeholder="Name">
-                  <input name="email" class="form__input form__input-1 mr-btm-small" type="text" placeholder="Email">
-                  <input name="subject" class="form__input mr-btm-small" type="text" placeholder="Subject">
-                  <textarea name="message" class="form__input  mr-btm-small" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-                  <a class="btn btn--primary" href="#">Send message</a>
-              </div>
+          <div class="contact">
+            <div class="contact__box">
+              <form action="#" class="form">
+                <input
+                  name="name"
+                  class="form__input form__input-1 mr-btm-small"
+                  type="text"
+                  placeholder="Name"
+                />
+                <input
+                  name="email"
+                  class="form__input form__input-1 mr-btm-small"
+                  type="text"
+                  placeholder="Email"
+                />
+                <input
+                  name="subject"
+                  class="form__input mr-btm-small"
+                  type="text"
+                  placeholder="Subject"
+                />
+                <textarea
+                  name="message"
+                  class="form__input  mr-btm-medium"
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Your Message"
+                ></textarea>
+                <a class="btn btn--primary " href="#">Send message</a>
+              </form>
             </div>
-            </form>
-            <div class="contact-box__info">
-              <h3 class="box__heading">you can find us</h3>
-              <ul><li>Adress</li>
-              <li>Email</li>
-              <li>Phone</li></ul>
+            <div class="contact__box">
+              <h3 class="contact__box-heading">Contact us</h3>
+              <ul class="contact__box-list">
+                <li class="contact__box-tuple mr-btm-small">
+                  <div class="contact__box-icon">
+                    <i class="fas fa-map-marker-alt fa-3x"></i>
+                  </div>
+                  <p class="contact__box-text">
+                    Adress: 245 Blane Street Saint Louis, MO 63104
+                  </p>
+                </li>
+
+                <li class="contact__box-tuple mr-btm-small">
+                  <div class="contact__box-icon">
+                    <i class="far fa-envelope fa-3x"></i>
+                  </div>
+                  <p class="contact__box-text">
+                    <a href="#">Email: flexsite@contact.com</a>
+                  </p>
+                </li>
+
+                <li class="contact__box-tuple mr-btm-small">
+                  <div class="contact__box-icon">
+                    <i class="fas fa-phone fa-3x"></i>
+                  </div>
+                  <p class="contact__box-text">
+                    <a href="#">Phone: +48 846 250 592</a>
+                  </p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
+      </section>
     </main>
+    <footer class="footer">
+      <div class="container row">
+        <h1 class="logo">
+          <a class="logo__link" href="#"
+            >Flex<span class="logo color-sec">Site</span></a
+          >
+        </h1>
+        <p class="footer__copy">
+          &copy; Created by <a class="footer__copy-link" href="#">Syljon</a>
+        </p>
+        <div class="footer__icons">
+          <a class="footer__icon" href="#">
+            <i class="fab fa-facebook  fa-3x"></i
+          ></a>
+          <a class="footer__icon" href="#">
+            <i class="fab fa-twitter-square  fa-3x"></i>
+          </a>
+          <a class="footer__icon" href="#">
+            <i class="fab fa-instagram  fa-3x"></i>
+          </a>
+          <a class="footer__icon" href="#">
+            <i class="fab fa-linkedin  fa-3x"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
     <script src="./index.js"></script>
   </body>
 </html>

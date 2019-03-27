@@ -11,13 +11,6 @@
   background-color: $color-tertiary;
   z-index: 1000;
   box-shadow: 0 1rem 3rem 0.5rem rgba(0, 0, 0, 0.3);
-  .logo {
-    color: $color-primary;
-    font-size: 3rem;
-  }
-  .black {
-    color: $color-secondary;
-  }
   .nav {
     z-index: -100;
     &__item {
