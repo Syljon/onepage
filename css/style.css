@@ -395,6 +395,10 @@ body {
         color: #4592af;
         animation: moveFromRight 1s ease-out; }
 
+@media (max-width: 500px) {
+  .header__text-box .heading--main {
+    letter-spacing: 0rem; } }
+
 .navigation {
   position: fixed;
   top: 0;

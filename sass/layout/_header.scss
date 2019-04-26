@@ -33,3 +33,15 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .header {
+    &__text-box {
+      .heading {
+        &--main {
+          letter-spacing: 0rem;
+        }
+      }
+    }
+  }
+}
