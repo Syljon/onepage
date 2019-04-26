@@ -36,13 +36,13 @@
 
   .burger {
     display: none;
-    position: relative;
-    width: 2.5rem;
-    cursor: pointer;
+    padding: 1rem;
+    background: none;
+    border: none;
     &__line {
       display: block;
-      position: absolute;
-      background-color: black;
+      background-color: $color-primary;
+      position: relative;
       width: 25px;
       height: 3px;
 
@@ -51,7 +51,8 @@
         display: block;
         content: "";
         position: absolute;
-        background-color: black;
+        background-color: $color-primary;
+        left: 0;
         width: 25px;
         height: 3px;
         transition: all 0.2s ease-in-out;
@@ -70,7 +71,7 @@
 @media (max-width: 768px) {
   .navigation {
     .nav {
-      display: flex;
+      display: none;
       list-style-type: none;
       position: fixed;
       top: 8vh;
@@ -91,6 +92,7 @@
       }
     }
     .nav.active {
+      display: flex;
       transform: translateY(0);
     }
     .burger {

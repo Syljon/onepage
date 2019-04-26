@@ -427,20 +427,21 @@ body {
       border-bottom: 2px solid #226089; }
   .navigation .burger {
     display: none;
-    position: relative;
-    width: 2.5rem;
-    cursor: pointer; }
+    padding: 1rem;
+    background: none;
+    border: none; }
     .navigation .burger__line {
       display: block;
-      position: absolute;
-      background-color: black;
+      background-color: #226089;
+      position: relative;
       width: 25px;
       height: 3px; }
       .navigation .burger__line::before, .navigation .burger__line::after {
         display: block;
         content: "";
         position: absolute;
-        background-color: black;
+        background-color: #226089;
+        left: 0;
         width: 25px;
         height: 3px;
         transition: all 0.2s ease-in-out; }
@@ -451,7 +452,7 @@ body {
 
 @media (max-width: 768px) {
   .navigation .nav {
-    display: flex;
+    display: none;
     list-style-type: none;
     position: fixed;
     top: 8vh;
@@ -469,6 +470,7 @@ body {
       font-size: 2.5rem;
       margin-right: 0; }
   .navigation .nav.active {
+    display: flex;
     transform: translateY(0); }
   .navigation .burger {
     display: block; }
